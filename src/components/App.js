@@ -23,20 +23,20 @@ const App = () =>{
         return /^[A-Za-z]+$/.test(str);
     }
 
-    const flames = [
-        "Siblings",
-        "Friends",
-        "Love",
-        "Affection",
-        "Marriage",
-        "Enemy"
-    ];
+    const flames = {
+      0: 'Siblings',
+      1: 'Friends',
+      2: 'Love',
+      3: 'Affection',
+      4: 'Marriage',
+      5: 'Enemy'
+    };
 
     function stringComparision(name1, name2){
         const map1 = new Map();
         const map2 = new Map();
-        const str1 = name1.toLowerCase();
-        const str2 = name2.toLowerCase();
+        const str1 = name1.trim().toLowerCase();
+        const str2 = name2.trim().toLowerCase();
 
         for(let char of str1){
             map1.set(char, (map1.get(char) || 0)+1);
@@ -61,7 +61,7 @@ const App = () =>{
         for(let [char, count] of map2){
             distinctChar += count;
         }
-        return distinctChar%6;
+        return distinctChar % 6;
         
     }
 
