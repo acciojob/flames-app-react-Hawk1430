@@ -96,7 +96,7 @@ const App = () =>{
                 data-testid="calculate_relationship"
                 name="calculate_relationship"
                 onClick={relationship}
-            >Claculate Relationship future</button>
+            >Claculate Relationship Future</button>
             <button 
                 onClick={handleClear}
                 data-testid="clear"
